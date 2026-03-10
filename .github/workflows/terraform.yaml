@@ -15,6 +15,9 @@ jobs:
       - name: Instalar Terraform
         uses: hashicorp/setup-terraform@v3
 
+      - name: Terraform Init
+        run: terraform init
+
       - name: Verificar Versión
         run: terraform version
 
