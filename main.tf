@@ -2,7 +2,7 @@ provider "docker" {}
 
 # Recurso para descargar imagen
 resource "docker_image" "nginx_image" {
-  name = var.container.image
+  name = var.container_image
 }
 
 # Recurso para crear contenedor
