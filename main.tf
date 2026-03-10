@@ -1,3 +1,4 @@
+# Definiendo main
 provider "docker" {}
 
 # Recurso para descargar imagen
