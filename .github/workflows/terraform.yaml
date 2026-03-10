@@ -16,16 +16,16 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Verificar Versión
-        uses: terraform version
+        run: terraform version
 
       - name: Formatear Código
-        uses: terraform fmt -check
+        run: terraform fmt -check
 
       - name: Validar Configuración
-        uses: terraform validate
+        run: terraform validate
 
       - name: Generar Plan
-        uses: terraform plan
+        run: terraform plan
 
       - name: Aplicar Infraestructura
-        uses: terraform apply -auto-approve
+        run: terraform apply -auto-approve
