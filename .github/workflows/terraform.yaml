@@ -1,0 +1,31 @@
+# Mi primer Terraform CI pipeline
+on:
+  push:
+    branches:
+      -main
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar Repositorio
+        uses: actions/checkout@v4
+
+      - name: Instalar Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Verificar Versión
+        uses: terraform version
+
+      - name: Formatear Código
+        uses: terraform fmt -check
+
+      - name: Validar Configuración
+        uses: terraform validate
+
+      - name: Generar Plan
+        uses: terraform plan
+
+      - name: Aplicar Infraestructura
+        uses: terraform apply -auto-approve
