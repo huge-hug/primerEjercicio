@@ -10,11 +10,11 @@ variable "container_name" {
 }
 
 variable "external_port" { # Puerto externo
-  type = number
+  type    = number
   default = 8080
 }
 
 variable "internal_port" { # Puerto interno
-  type = number
+  type    = number
   default = 80
 }
