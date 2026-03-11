@@ -16,5 +16,5 @@ variable "external_port" { # Puerto externo
 
 variable "internal_port" { # Puerto interno
   type = number
-  defaul = 80
+  default = 80
 }
